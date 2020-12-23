@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app2020';
+  dataToChildFromParent = 'Este mensaje es para el Form Componet desde App Component';
 }

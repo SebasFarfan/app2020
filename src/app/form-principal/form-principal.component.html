@@ -1,1 +1,35 @@
 <p>form-principal works!</p>
+<p>Name:</p>
+<input type="text" name="" [value]="defaultName">
+<p>Email:</p>
+<input #email type="email" name="">
+<br><br>
+<button (click)="onSendForm(email)">Enviar Formulario</button>
+<br>
+<button (click)="onDefaultForm()">Default Form</button>
+<br> 
+<p>{{status}}</p>
+
+<div *ngIf="displayPassword; then showPassword; else hidePassword">
+
+</div>
+
+<ng-template #showPassword>
+    <p>123456</p>
+</ng-template>
+
+<ng-template #hidePassword>
+    <p>No muestro el Password</p>
+</ng-template>
+
+<div [ngSwitch] = "lightStatus">
+    <div *ngSwitchCase = "'GREEN'">Verde</div>
+    <div *ngSwitchCase = "'RED'">Rojo</div>
+    <div *ngSwitchCase = "'YELLOW'">Amarillo</div>    
+    <div *ngSwitchDefault>Roto</div>
+</div>
+
+<div *ngFor="let nombre of names">
+    <p>{{nombre}}</p>
+</div>
+<p>{{messageFromParent}}</p>
