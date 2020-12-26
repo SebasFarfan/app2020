@@ -7,5 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app2020';
-  dataToChildFromParent = 'Este mensaje es para el Form Componet desde App Component';
+  show:boolean = true;
+  //showDos:boolean = false;
+  activo:any = "";
+
+  cursos:string[]=["HTML", "ANGULAR", "PHP"];
+
+  animales:Array<any> = [
+    {tipo: "Perro", nombre:"Firulais", edad:"2"},
+    {tipo: "Gato", nombre:"Chabelo", edad:"11"},
+    {tipo: "Gato", nombre:"Coquillo", edad:"11"},
+    {tipo: "Perro", nombre:"Jack", edad:"4"}
+  ]
 }
